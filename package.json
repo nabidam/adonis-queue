@@ -1,0 +1,63 @@
+{
+	"name": "adonis-queue",
+	"version": "0.0.1",
+	"description": "queue for adonis v5",
+	"main": "index.js",
+	"scripts": {
+		"mrm": "mrm --preset=@adonisjs/mrm-preset",
+		"pretest": "npm run lint",
+		"test": "node -r @adonisjs/require-ts/build/register bin/test.ts",
+		"clean": "del-cli build",
+		"compile": "npm run lint && npm run clean && tsc",
+		"build": "npm run compile",
+		"prepublishOnly": "npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nabidam/adonis-queue.git"
+	},
+	"keywords": [
+		"adonisjs",
+		"queue",
+		"bullmq"
+	],
+	"author": "navid",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/nabidam/adonis-queue/issues"
+	},
+	"homepage": "https://github.com/nabidam/adonis-queue#readme",
+	"devDependencies": {
+		"@adonisjs/core": "^5.8.0",
+		"@adonisjs/mrm-preset": "^5.0.3",
+		"@adonisjs/require-ts": "^2.0.13",
+		"@types/node": "^18.11.10",
+		"bullmq": "^3.3.2",
+		"del-cli": "^5.0.0",
+		"mrm": "^4.1.13",
+		"typescript": "^4.9.3"
+	},
+	"peerDependencies": {
+		"@adonisjs/core": "^5.8.0"
+	},
+	"peerDependenciesMeta": {
+		"@adonisjs/session": {
+			"optional": true
+		}
+	},
+	"mrmConfig": {
+		"core": false,
+		"license": "MIT",
+		"services": [
+			"github-actions"
+		],
+		"minNodeVersion": "16.13.1",
+		"probotApps": [],
+		"runGhActionsOnWindows": false
+	},
+	"files": [
+		"build/src",
+		"build/index.d.ts",
+		"build/index.js"
+	]
+}
